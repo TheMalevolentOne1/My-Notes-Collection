@@ -7,7 +7,7 @@ theme:
       scheme: slate
       primary: black
       accent: light blue
-  logo: logo.png
+  logo: assets/logo.png
   favicon: assets/favicon.ico
 
 nav:
@@ -30,8 +30,9 @@ markdown_extensions:
 
 plugins:
   - search
-  - mkdocs-git-revision-date-localized-plugin
-  - mkdocs-material-extensions
+  - git-revision-date-localized
+  - material-extensions
+  - sitemap
 
 extra_css:
   - stylesheets/extra.css
@@ -43,7 +44,7 @@ extra_javascript:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/YourUsername
+      link: https://github.com/TheMalevolentOne1
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/YourUsername
   features:
@@ -51,20 +52,3 @@ extra:
     - navigation.tabs
     - navigation.tracking
     - navigation.sections
-
-# Repository URL
-repo_url: https://github.com/TheMalevolentOne1/My-Notes-Collection
-repo_name: GitHub
-
-# Google Analytics
-google_analytics:
-  - UA-XXXXXXXX-X
-  - auto
-
-# Sitemap generation
-plugins:
-  - search
-  - mkdocs-sitemap
-
-# Additional settings
-edit_uri: edit/main/docs/
