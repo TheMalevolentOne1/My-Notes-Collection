@@ -1,7 +1,4 @@
 site_name: My Notes Collection
-site_description: A professional notes collection
-site_author: Your Name
-site_url: https://yourdomain.com
 
 theme:
   name: 'material'
