@@ -1,0 +1,39 @@
+site_name: My Notes Collection
+theme:
+  name: 'material'
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: light blue
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+nav:
+  - Welcome Contents 👋: index.md
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+plugins:
+  - search
+  - git-revision-date-localized
+  - material-extensions
+  - sitemap
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/TheMalevolentOne1
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/YourUsername
+features:
+  - navigation.instant
+  - navigation.tabs
+  - navigation.tracking
+  - navigation.sections
