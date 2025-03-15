@@ -1,26 +1,73 @@
-name: ci
-on:
-  push:
-    branches:
-      - master
-      - main
-permissions:
-  contents: write
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.x
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-      - run: pip install mkdocs-material
-      - run: pip install mkdocs-roamlinks-plugin
-      - run: pip install mkdocs-rss-plugin
-      # - run: pip install mkdocs-mermaid2-plugin
-      - run: mkdocs gh-deploy --force
+site_name: My Notes Collection
+site_description: A professional notes collection
+site_author: Your Name
+site_url: https://yourdomain.com
+
+theme:
+  name: 'material'
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: light blue
+  logo: logo.png
+  favicon: assets/favicon.ico
+
+nav:
+  - Home: index.md
+  - Notes:
+      - Python: notes/python.md
+      - Data Science: notes/data-science.md
+      - Machine Learning: notes/machine-learning.md
+  - About: about.md
+  - Contact: contact.md
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - mkdocs-git-revision-date-localized-plugin
+  - mkdocs-material-extensions
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+# Customization settings
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/YourUsername
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/YourUsername
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.sections
+
+# Repository URL
+repo_url: https://github.com/TheMalevolentOne1/My-Notes-Collection
+repo_name: GitHub
+
+# Google Analytics
+google_analytics:
+  - UA-XXXXXXXX-X
+  - auto
+
+# Sitemap generation
+plugins:
+  - search
+  - mkdocs-sitemap
+
+# Additional settings
+edit_uri: edit/main/docs/
