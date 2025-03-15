@@ -14,7 +14,6 @@
   nav:
   - Home: index.md
   
-  # Extensions
   markdown_extensions:
   - admonition
   - codehilite
@@ -22,7 +21,7 @@
   - meta
   - toc:
       permalink: true
-  
+
   plugins:
   - search
   - git-revision-date-localized
@@ -35,7 +34,6 @@
   extra_javascript:
   - javascripts/extra.js
   
-  # Customization settings
   extra:
     social:
     - icon: fontawesome/brands/github
