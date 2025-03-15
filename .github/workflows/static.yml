@@ -12,12 +12,6 @@ theme:
 
 nav:
   - Home: index.md
-  - Notes:
-      - Python: notes/python.md
-      - Data Science: notes/data-science.md
-      - Machine Learning: notes/machine-learning.md
-  - About: about.md
-  - Contact: contact.md
 
 # Extensions
 markdown_extensions:
